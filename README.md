@@ -25,56 +25,42 @@ The PGRKAM portal and mobile application offer diverse employment-related servic
 
 ## Key Features
 
-- 🤖 **AI-Powered Conversations**: Natural language understanding using OpenAI GPT-3.5/GPT-4
-- 🌐 **Multilingual Support**: Punjabi, Hindi, and English
-- 🎤 **Voice Interaction**: Speech-to-text and text-to-speech capabilities
-- 💼 **Job Recommendations**: Personalized suggestions based on user profile
-- 📱 **Responsive Design**: Works seamlessly on desktop and mobile devices
-- 💾 **User History**: Stores chat history and preferences
-- ⚡ **Real-time Responses**: Instant query handling
+### 🎨 *Beautiful Design*
+- *Animated gradient backgrounds* with smooth color transitions
+- *Glass morphism effects* for modern UI elements
+- *Responsive design* that works perfectly on all devices
+- *Custom scrollbar* with gradient styling
+- *Hover animations* and micro-interactions throughout
 
+### 🌐 *Multilingual Support*
+- *4 Languages*: English, Hindi (हिंदी), Kannada (ಕನ್ನಡ), Punjabi (ਪੰਜਾਬੀ)
+- *Complete translation* of all UI elements
+- *Language selector* in header with flag indicators
+- *Persistent language selection* throughout the session
 
----
+### 💼 *Job Management*
+- *Job listings* with detailed information
+- *Search functionality* across jobs, companies, and locations
+- *Filter by job type* (Full Time, Part Time, Remote)
+- *Responsive job cards* with gradient accents
+- *Application system* with form validation
 
-## Technology Stack
-
-### Frontend
-
-- **React.js** (Latest Version) - Interactive UI framework
-- **HTML5, CSS3, JavaScript (ES6)** - Core web technologies
-- **Tailwind CSS / Bootstrap** - Responsive styling
-- **Axios** - HTTP client for API calls
-
-
-### Backend
-
-- **Node.js** - Runtime environment
-- **Express.js** - Web framework for REST APIs
-- **MongoDB / PostgreSQL** - Database for user data and chat history
-
-
-### AI & NLP
-
-- **OpenAI GPT-3.5 / GPT-4 API** - Natural language processing
-- **Google Cloud Translation API / Indic NLP Library** - Multilingual support
-- **Web Speech API** - Voice input/output
-
-
-### Tools & Utilities
-
-- **Git & GitHub** - Version control
-- **Postman** - API testing
-- **Visual Studio Code** - Development environment
-- **Docker** (Optional) - Containerization for deployment
+### 📄 *Application System*
+- *Resume upload* (PDF, DOC, DOCX formats)
+- *Cover letter* text area
+- *Form validation* with required fields
+- *Success confirmation* with animated feedback
+- *File size validation* (Max 5MB)
 
 
 ### Prerequisites
-
-- Node.js (v14 or higher)
+- Node.js (v16 or higher)
 - npm or yarn
 - MongoDB / PostgreSQL
 - OpenAI API Key
 - Google Cloud Translation API Key (optional)
+
+Installation
 
  ```bash 
 # Clone the repository
@@ -94,6 +80,73 @@ GOOGLE_TRANSLATE_API_KEY=your_google_api_key
 npm start
 
  ```
+
+## 🏗 Project Structure
+
+ ```bash 
+src/
+├── components/           # React components
+│   ├── Header.tsx       # Navigation with language selector
+│   ├── Hero.tsx         # Landing section with animated background
+│   ├── JobList.tsx      # Job listings with search/filter
+│   ├── JobCard.tsx      # Individual job display cards
+│   └── ApplicationModal.tsx # Job application form
+├── context/
+│   └── LanguageContext.tsx # Language state management
+├── data/
+│   └── jobs.ts          # Sample job data
+├── types/
+│   └── index.ts         # TypeScript type definitions
+├── App.tsx              # Main application component
+├── main.tsx             # Application entry point
+└── index.css            # Global styles and gradients
+
+ ```
+
+## 🎨 Design System
+
+### *Color Gradients*
+- *Hero Section*: Animated gradient with multiple colors
+- *Job Section*: Warm orange-to-peach gradient
+- *Cards*: Glass morphism with backdrop blur
+- *Buttons*: Purple-to-pink gradient with hover effects
+
+### *Typography*
+- *Headings*: Bold with gradient text effects
+- *Body Text*: Clean, readable fonts with proper contrast
+- *Multilingual*: Optimized for all supported languages
+
+### *Animations*
+- *Background*: Continuous gradient animation (15s cycle)
+- *Cards*: Hover lift and scale effects
+- *Buttons*: Scale and shadow transitions
+- *Loading*: Smooth spinner animations
+
+
+ Application Flow
+
+1. *Landing*: User sees animated hero section
+2. *Language Selection*: Choose preferred language from header
+3. *Job Browsing*: Search and filter available positions
+4. *Job Application*: Click "Apply Now" to open modal
+5. *Form Submission*: Fill details and upload resume
+6. *Confirmation*: Success message with next steps
+
+## 🔧 Technical Details
+
+### *Built With*
+- *React 18* with TypeScript
+- *Tailwind CSS* for styling
+- *Lucide React* for icons
+- *Vite* for build tooling
+
+*Key Features*
+- *Context API* for state management
+- *Custom hooks* for language switching
+- *File upload* with validation
+- *Responsive design* with mobile-first approach
+- *Accessibility* considerations throughout
+
 
 ## API Endpoints
 
