@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multilingual Smart Chatbot - PGRKAM</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-robot"></i>
+                <span>PGRKAM ChatBot</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active" data-section="home">Home</a>
+                <a href="#chatbot" class="nav-link" data-section="chatbot">Chatbot</a>
+                <a href="#jobs" class="nav-link" data-section="jobs">Job Portal</a>
+                <a href="#about" class="nav-link" data-section="about">About</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section active">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Multilingual Smart Chatbot</h1>
+                <p class="hero-subtitle">Experience AI-powered conversations in your preferred language</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" data-section="chatbot">
+                        <i class="fas fa-comments"></i>
+                        Start Chatting
+                    </button>
+                    <button class="btn btn-secondary" data-section="jobs">
+                        <i class="fas fa-briefcase"></i>
+                        Find Jobs
+                    </button>
+                </div>
+            </div>
+            <div class="hero-illustration">
+                <div class="floating-card">
+                    <i class="fas fa-robot"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot Section -->
+    <section id="chatbot" class="section">
+        <div class="container">
+            <h2 class="section-title">AI Chatbot</h2>
+            
+            <!-- Language Selection -->
+            <div id="language-selection" class="language-selector">
+                <h3>Choose your preferred language:</h3>
+                <div class="language-grid">
+                    <button class="language-btn" data-lang="en" data-name="English">
+                        <i class="fas fa-globe"></i>
+                        <span>English</span>
+                    </button>
+                    <button class="language-btn" data-lang="hi" data-name="Hindi">
+                        <i class="fas fa-globe-asia"></i>
+                        <span>हिंदी</span>
+                    </button>
+                    <button class="language-btn" data-lang="pa" data-name="Punjabi">
+                        <i class="fas fa-globe-asia"></i>
+                        <span>ਪੰਜਾਬੀ</span>
+                    </button>
+                    <button class="language-btn" data-lang="kn" data-name="Kannada">
+                        <i class="fas fa-globe-asia"></i>
+                        <span>ಕನ್ನಡ</span>
+                    </button>
+                    <button class="language-btn" data-lang="ta" data-name="Tamil">
+                        <i class="fas fa-globe-asia"></i>
+                        <span>தமிழ்</span>
+                    </button>
+                    <button class="language-btn" data-lang="te" data-name="Telugu">
+                        <i class="fas fa-globe-asia"></i>
+                        <span>తెలుగు</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Chat Interface -->
+            <div id="chat-interface" class="chat-interface" style="display: none;">
+                <div class="chat-header">
+                    <div class="chat-info">
+                        <i class="fas fa-robot"></i>
+                        <div>
+                            <h4>AI Assistant</h4>
+                            <span id="selected-language">English</span>
+                        </div>
+                    </div>
+                    <button id="change-language" class="btn-change-lang">
+                        <i class="fas fa-language"></i>
+                        Change Language
+                    </button>
+                </div>
+                
+                <div class="chat-messages" id="chat-messages">
+                    <div class="message bot-message">
+                        <div class="message-content">
+                            <p id="welcome-message">Hello! I'm your AI assistant. How can I help you today?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-input-container">
+                    <div class="suggested-questions">
+                        <button class="suggestion-btn" data-question="hello">👋 Say Hello</button>
+                        <button class="suggestion-btn" data-question="help">❓ Get Help</button>
+                        <button class="suggestion-btn" data-question="weather">🌤️ Weather</button>
+                        <button class="suggestion-btn" data-question="time">⏰ Current Time</button>
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" id="message-input" placeholder="Type your message...">
+                        <button id="send-button">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Portal Section -->
+    <section id="jobs" class="section">
+        <div class="container">
+            <h2 class="section-title">AI-Powered Job Recommendations</h2>
+            
+            <div class="job-portal">
+                <!-- Resume Upload -->
+                <div class="upload-section">
+                    <div class="upload-card">
+                        <i class="fas fa-file-upload"></i>
+                        <h3>Upload Your Resume</h3>
+                        <p>Get personalized job recommendations based on your skills and experience</p>
+                        
+                        <div class="upload-area" id="upload-area">
+                            <input type="file" id="resume-input" accept=".pdf,.doc,.docx" hidden>
+                            <div class="upload-content">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>Drag & drop your resume or <span class="upload-link">browse files</span></p>
+                                <small>Supports PDF, DOC, DOCX files</small>
+                            </div>
+                        </div>
+                        
+                        <button id="upload-btn" class="btn btn-primary">
+                            <i class="fas fa-upload"></i>
+                            Select Resume
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Job Recommendations -->
+                <div id="job-recommendations" class="recommendations-section" style="display: none;">
+                    <h3>Recommended Jobs for You</h3>
+                    <div class="job-filters">
+                        <select id="location-filter">
+                            <option value="">All Locations</option>
+                            <option value="bangalore">Bangalore</option>
+                            <option value="mumbai">Mumbai</option>
+                            <option value="delhi">Delhi</option>
+                            <option value="hyderabad">Hyderabad</option>
+                            <option value="pune">Pune</option>
+                        </select>
+                        <select id="experience-filter">
+                            <option value="">All Experience</option>
+                            <option value="0-1">0-1 years</option>
+                            <option value="1-3">1-3 years</option>
+                            <option value="3-5">3-5 years</option>
+                            <option value="5+">5+ years</option>
+                        </select>
+                        <select id="salary-filter">
+                            <option value="">All Salaries</option>
+                            <option value="0-5">0-5 LPA</option>
+                            <option value="5-10">5-10 LPA</option>
+                            <option value="10-15">10-15 LPA</option>
+                            <option value="15+">15+ LPA</option>
+                        </select>
+                    </div>
+                    
+                    <div id="job-list" class="job-list">
+                        <!-- Jobs will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About PGRKAM Chatbot</h2>
+            <div class="about-content">
+                <div class="about-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>AI-Powered</h3>
+                    <p>Advanced artificial intelligence that understands and responds in multiple languages with contextual accuracy.</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-language"></i>
+                    <h3>Multilingual Support</h3>
+                    <p>Communicate seamlessly in English, Hindi, Punjabi, Kannada, Tamil, Telugu, and more regional languages.</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Job Matching</h3>
+                    <p>Smart resume analysis and job recommendations tailored to your skills, experience, and career preferences.</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Secure & Private</h3>
+                    <p>Your data is encrypted and protected. We prioritize your privacy and maintain strict confidentiality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay" style="display: none;">
+        <div class="loading-spinner">
+            <i class="fas fa-robot"></i>
+            <p>Processing your resume...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
