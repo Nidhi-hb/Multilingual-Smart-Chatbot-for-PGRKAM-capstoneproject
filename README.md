@@ -138,7 +138,7 @@ Optimized for:
 
 ## 🏠 Home Page
 
-![Home Page](images/ss1.png)
+![Home Page](ss1.png)
 
 The landing page introduces the multilingual chatbot and provides direct access to:
 
@@ -150,7 +150,7 @@ The landing page introduces the multilingual chatbot and provides direct access 
 
 ## 💼 Job Recommendation Portal
 
-![Job Portal](images/ss2.png)
+![Job Portal](ss2.png)
 
 Users receive:
 
@@ -164,7 +164,7 @@ Users receive:
 
 ## 🌐 Language Selection Interface
 
-![Language Selection](images/ss3.png)
+![Language Selection](ss3.png)
 
 Users can select their preferred communication language before interacting with the chatbot.
 
@@ -181,7 +181,7 @@ Supported languages:
 
 ## 🤖 Chatbot Interface
 
-![Chat Interface](images/ss4.png)
+![Chat Interface](ss4.png)
 
 AI assistant provides:
 
