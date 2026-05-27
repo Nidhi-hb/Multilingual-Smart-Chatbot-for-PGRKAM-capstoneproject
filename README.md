@@ -14,50 +14,8 @@ The PGRKAM portal and mobile application offer diverse employment-related servic
 - **Seamless Navigation**: Direct guidance to relevant resources
 
 
- Objectives
-
- Develop an AI-driven chatbot using Large Language Models (GPT-3.5/GPT-4) 
- Enable multilingual support for text and voice queries
- Provide intelligent answers and navigation guidance
- Recommend jobs based on candidate preferences
- Maintain chat history and user profiles
 
 
-## Key Features
-
-### 🎨 *Beautiful Design*
-- *Animated gradient backgrounds* with smooth color transitions
-- *Glass morphism effects* for modern UI elements
-- *Responsive design* that works perfectly on all devices
-- *Custom scrollbar* with gradient styling
-- *Hover animations* and micro-interactions throughout
-
-### 🌐 *Multilingual Support*
-- *4 Languages*: English, Hindi (हिंदी), Kannada (ಕನ್ನಡ), Punjabi (ਪੰਜਾਬੀ)
-- *Complete translation* of all UI elements
-- *Language selector* in header with flag indicators
-- *Persistent language selection* throughout the session
-
-### 💼 *Job Management*
-- *Job listings* with detailed information
-- *Search functionality* across jobs, companies, and locations
-- *Filter by job type* (Full Time, Part Time, Remote)
-- *Responsive job cards* with gradient accents
-- *Application system* with form validation
-
-### 📄 *Application System*
-- *Resume upload* (PDF, DOC, DOCX formats)
-- *Cover letter* text area
-- *Form validation* with required fields
-- *Success confirmation* with animated feedback
-- *File size validation* (Max 5MB)
-
-
-### Prerequisites
-- Node.js (v16 or higher)
-- npm or yarn
-- MongoDB / PostgreSQL
-- OpenAI API Key
 - Google Cloud Translation API Key (optional)
 
 Installation
@@ -147,25 +105,3 @@ src/
 - *Responsive design* with mobile-first approach
 - *Accessibility* considerations throughout
 
-
-## API Endpoints
-
-### Chat Endpoints
-
-- `POST /api/chat` - Send a message to the chatbot
-- `GET /api/chat/history/:userId` - Retrieve chat history
-- `DELETE /api/chat/history/:userId` - Clear chat history
-
-
-### Job Endpoints
-
-- `GET /api/jobs` - Get all job listings
-- `GET /api/jobs/recommendations/:userId` - Get personalized recommendations
-- `POST /api/jobs/apply` - Apply for a job
-
-
-### User Endpoints
-
-- `POST /api/users/register` - Register a new user
-- `POST /api/users/login` - User login
-- `GET /api/users/profile/:userId` - Get user profile
