@@ -494,18 +494,8 @@ This project is licensed under the MIT License.
 
 ---
 
-# ⭐ Support
 
 If you found this project useful:
 
 ⭐ Star this repository
 
-🍴 Fork it
-
-🛠️ Contribute improvements
-
----
-
-## Thank You
-
-Building inclusive AI solutions for employment accessibility 🚀
